@@ -7,6 +7,8 @@ fn main() {
 
     // cmake build
     let dst = Config::new("src/libdivsufsort")
+        .define("CMAKE_BUILD_TYPE", "Release")
+        .define("CMAKE_C_FLAGS", "-O3")
         .define("BUILD_EXAMPLES", "OFF")
         .define("BUILD_SHARED_LIBS", "OFF")
         .define("BUILD_DIVSUFSORT64", "ON")
